@@ -6,7 +6,7 @@ const Home: NextPage = () => {
     flex h-screen justify-center items-center
     bg-gradient-to-r from-purple-500 to-blue-600
     `}>
-      <span className='text-4xl'> MusicAll </span>
+      <h1 className='text-4xl'> MusicAll </h1>
     </div>
   )
 }
