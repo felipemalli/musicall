@@ -1,9 +1,20 @@
-import { Prisma } from '@prisma/client';
+import { IsEmail, IsNotEmpty, IsOptional, IsString } from 'class-validator';
+import { User } from '../entities/user.entity';
 
-export class CreateUserDto implements Prisma.UserCreateInput {
+export class CreateUserDto extends User {
+  @IsString()
+  @IsNotEmpty()
   name: string;
+
+  @IsEmail()
+  @IsNotEmpty()
   email: string;
+
+  @IsString()
+  @IsNotEmpty()
   password: string;
-  image?: string;
-  playlists?: Prisma.PlaylistCreateNestedManyWithoutUserInput;
+
+  @IsString()
+  @IsOptional()
+  image?: string | null;
 }
