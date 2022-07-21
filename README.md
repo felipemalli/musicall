@@ -1,6 +1,6 @@
 # Musicall
 
-Project full-stack of a web music page.
+Full-stack Project of a web music page.
 
 In progress...
 
